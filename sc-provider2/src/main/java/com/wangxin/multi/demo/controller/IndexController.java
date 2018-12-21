@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @Author:jzwx
  * @Desicription: IndexController
- * @Date:Created in 2018-12-18 14:08
+ * @Date:Created in 2018-12-21 10:23
  * @Modified By:
  */
 @RestController
@@ -21,14 +21,14 @@ import java.util.List;
 public class IndexController {
     @GetMapping("{msg}")
     public Mono<String> sayHelloWorld(@PathVariable("msg") String msg) {
-        System.out.println("come on1 " + msg);
-        return Mono.just("sc-provider receive1 : " +msg);
+        System.out.println("come on2 " + msg);
+        return Mono.just("sc-provider receive2 : " +msg);
     }
 
     @GetMapping("list")
     public Flux<Integer> list() {
         List<Integer> list = new ArrayList<>();
-        list.add(1);
+        list.add(2);
         list.add(8);
         list.add(22);
         list.add(75);

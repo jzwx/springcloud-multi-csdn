@@ -11,7 +11,8 @@
         <module>sc-zuul</module>
         <module>sc-dashboard</module>
 		<module>sc-zipkin1</module>
-	</modules>
+        <module>sc-provider2</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
