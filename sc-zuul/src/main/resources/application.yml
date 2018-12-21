@@ -1,0 +1,17 @@
+server:
+  port: 8400
+spring:
+  profiles:
+    active: csdn
+zuul:
+  routes:
+    sc-consumer: /consumer/**
+    sc-provider: /provider/**
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 80000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 80000

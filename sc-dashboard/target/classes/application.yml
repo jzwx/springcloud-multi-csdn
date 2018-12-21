@@ -1,0 +1,23 @@
+server:
+  port: 8900
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://root:booszy@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: sc-dashboard
+turbine:
+#  instanceUrlSuffix:
+#    default: hystrix.stream
+  aggregator:
+    clusterConfig: default
+  appConfig: sc-consumer
+  clusterNameExpression: "'default'"
+
+spring:
+  application:
+    name: sc-dashboard
